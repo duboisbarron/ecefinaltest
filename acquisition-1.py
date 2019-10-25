@@ -180,6 +180,10 @@ def age_histogram():
 
     plt.hist(valid_ages, bins=100, density=True)
 
+    mu = maximum_likelihood_estimator_mu(valid_ages)
+    sig = maximum_likelihood_estimator_sig_sq(valid_ages)
+    print(mu, sig)
+
     mean = np.mean(valid_ages)
     std = np.std(valid_ages)
     valid_ages.sort()
@@ -246,6 +250,10 @@ def fare_histogram():
             valid_fares = np.append(valid_fares, float(row[9]))
         except Exception as e:
             continue
+
+    mu = maximum_likelihood_estimator_mu(valid_fares)
+    sig = maximum_likelihood_estimator_sig_sq(valid_fares)
+    print(mu, sig)
 
     plt.hist(valid_fares, bins=50, density=True)
     mean = np.mean(valid_fares)
