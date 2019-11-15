@@ -43,7 +43,7 @@ def a_b_train(training_file):
 
     y_vals = []
 
-    csv_file = open(training_file)
+    csv_file = open(training_file, 'rU')
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row_num, row in enumerate(csv_reader):
         if row_num == 0:
@@ -92,7 +92,7 @@ def a_b_train(training_file):
     col7test = []
     col8test = []
     y_valstest = []
-    csv_test = open(MASTERFILES[2])
+    csv_test = open(MASTERFILES[2], 'rU')
     csv_reader_test = csv.reader(csv_test, delimiter=',')
     for index, row in enumerate(csv_reader_test):
         if index == 0:
@@ -137,7 +137,7 @@ def get_data(filename):
 
     y_vals = []
 
-    csv_file = open(filename)
+    csv_file = open(filename, 'rU')
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row_num, row in enumerate(csv_reader):
         if row_num == 0:
@@ -322,7 +322,7 @@ def adding_features():
 
     y_vals = []
 
-    csv_file = open(MASTERFILES[1])
+    csv_file = open(MASTERFILES[1], 'rU')
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row_num, row in enumerate(csv_reader):
         if row_num == 0:
@@ -391,7 +391,7 @@ def adding_features():
     col7test = []
     col8test = []
     y_valstest = []
-    csv_test = open(MASTERFILES[2])
+    csv_test = open(MASTERFILES[2], 'rU')
     csv_reader_test = csv.reader(csv_test, delimiter=',')
     for index, row in enumerate(csv_reader_test):
         if index == 0:
